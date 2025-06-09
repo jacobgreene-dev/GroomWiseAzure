@@ -1,0 +1,96 @@
+# General
+.DS_Store
+.env
+.env.*
+.local
+.vscode/
+*.log
+*.sqlite
+*.sqlite-journal
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.toolstmp/
+.idea/
+
+# DotNet specific (UserService, NotificationService)
+**/bin/
+**/obj/
+*.csproj.user
+*.resharper
+*.vspscc
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.opendb
+*.sdf
+*.vssscc
+*.builds
+*.log
+# NuGet packages
+**/packages/
+# Rider
+*.csproj.DotSettings
+
+# Node.js specific (PetService, PaymentService, Frontend)
+**/node_modules/
+# npm package manager cache
+.npm/
+# Yarn
+.yarn/
+.yarnrc
+.pnp.*
+# Built application files
+**/build/
+**/dist/
+**/out/
+
+# Python specific (ImageProcessing, booking-service)
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+.Python/
+env/
+venv/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints
+# mypy
+.mypy_cache/
+# ruff
+.ruff_cache/
+
+# Infrastructure
+# Terraform state files (if using Terraform instead of Bicep in future)
+# However, you're using Bicep, so these might not apply immediately
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Docker
+# Docker build context exclusions (if using .dockerignore, these are redundant here)
+# But useful to keep them out of Git if accidentally not in .dockerignore
+**/target/
+**/__pycache__/
+*.swp
+*.bak
+*.tmp
+# Specific for docker-compose generated files if not meant for commit
+docker-compose.override.yml
+# Docker build artifacts
+*.dockerignore # The .dockerignore file itself should be versioned, but adding it here if you mean to ignore common outputs
+
+# CI/CD specific (GitHub Actions)
+# Workflow runs often generate temporary files or caches
+.github/workflows/*.token # If any tokens are generated/stored locally
+.github/workflows/*.cache # If any cache directories are used
+
+# Database (Local/Dev)
+# Ignore local database files, but keep schema/seed files
+**/data.db # Example for SQLite, adjust based on your local DB
+**/sql_data/ # A common directory for local DB files
